@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "deprecated": true,
+  "replacementPath": ".virtue/virtue.config.json",
+  "projectName": "voos-live-test-webapp",
+  "projectDescription": "A test application for virtue odyssey",
+  "projectType": "web",
+  "projectCategory": "website",
+  "workspaceProfile": "website",
+  "repository": {
+    "remoteUrl": "https://github.com/virtuedevelopment/voos-live-test-web-app.git"
+  },
+  "createdBy": "Virtue Engine",
+  "createdAt": "2026-06-19T04:21:37.902Z",
+  "notes": ""
+}

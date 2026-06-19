@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 1,
+  "category": "web",
+  "profile": "website",
+  "status": "skeletal",
+  "framework": "next-app-router",
+  "language": "javascript",
+  "base": "web-next-app",
+  "description": "Minimal website template with public page placeholders and shared metadata/style helpers.",
+  "surfaces": [
+    {
+      "id": "home",
+      "route": "/",
+      "path": "app/(pages)/(home)/page.jsx",
+      "placeholder": "This is the website home page"
+    },
+    {
+      "id": "about",
+      "route": "/about",
+      "path": "app/(pages)/about/page.jsx",
+      "placeholder": "This is the about page"
+    },
+    {
+      "id": "contact",
+      "route": "/contact",
+      "path": "app/(pages)/contact/page.jsx",
+      "placeholder": "This is the contact page"
+    }
+  ],
+  "skillHints": [
+    "frontend",
+    "ui-design",
+    "styles-and-css",
+    "accessibility-and-qa",
+    "seo",
+    "launch-readiness",
+    "submissions-and-notifications",
+    "backend-foundation",
+    "backend",
+    "data-and-cms",
+    "media-storage",
+    "analytics-and-tracking",
+    "payments",
+    "routing-and-metadata",
+    "content-modeling",
+    "performance"
+  ],
+  "excludedSurfaces": [
+    "admin",
+    "article-detail",
+    "articles",
+    "cart",
+    "checkout",
+    "dashboard",
+    "login",
+    "preview",
+    "products",
+    "services",
+    "thank-you",
+    "work"
+  ]
+}

@@ -1,8 +1,9 @@
 import Link from "next/link";
 
+import { createPageMetadata } from "@/lib/seo/metadata";
+import { CapabilityDashboard } from "./CapabilityDashboard";
 import styles from "./page.module.css";
 import { homeContent } from "./content";
-import { createPageMetadata } from "@/lib/seo/metadata";
 
 export const metadata = createPageMetadata({
   title: "Home",
@@ -30,15 +31,7 @@ export default function HomePage() {
             </Link>
           </nav>
         </div>
-        <aside className={styles.panel} aria-labelledby="home-panel-title">
-          <p className={styles.panelLabel}>Live test scope</p>
-          <h2 id="home-panel-title">{homeContent.panelTitle}</h2>
-          <ul>
-            {homeContent.checks.map((check) => (
-              <li key={check}>{check}</li>
-            ))}
-          </ul>
-        </aside>
+        <CapabilityDashboard label={homeContent.dashboardLabel} capabilities={homeContent.capabilities} />
       </section>
     </main>
   );

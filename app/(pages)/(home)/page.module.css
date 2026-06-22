@@ -5,21 +5,23 @@
   padding: var(--space-page);
   background:
     linear-gradient(135deg, rgba(17, 24, 39, 0.1), transparent 34rem),
-    radial-gradient(circle at 88% 18%, rgba(22, 163, 74, 0.14), transparent 24rem),
+    radial-gradient(circle at 88% 18%, rgba(20, 184, 166, 0.14), transparent 24rem),
     linear-gradient(180deg, rgba(255, 255, 255, 0.78), rgba(248, 250, 252, 0.92)),
     var(--color-page);
 }
 
 .hero {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(17rem, 22rem);
+  grid-template-columns: minmax(0, 0.9fr) minmax(24rem, 1fr);
   gap: clamp(2rem, 6vw, 5rem);
-  width: min(100%, 70rem);
+  width: min(100%, 72rem);
+  margin: 0 auto;
   align-items: center;
 }
 
 .copy {
   max-width: 44rem;
+  min-width: 0;
 }
 
 .eyebrow {
@@ -77,62 +79,149 @@
   background: rgba(255, 255, 255, 0.72);
 }
 
-.panel {
+.primaryAction:focus-visible,
+.secondaryAction:focus-visible,
+.currentAction:focus-visible,
+.switcherButton:focus-visible {
+  outline: 2px solid var(--color-text);
+  outline-offset: 3px;
+}
+
+.dashboard {
+  display: grid;
+  gap: 1rem;
+  min-width: 0;
+}
+
+.switcher {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.switcherButton {
+  display: grid;
+  gap: 0.35rem;
+  min-height: 5rem;
+  border: 1px solid var(--color-border);
+  border-radius: 0.5rem;
+  padding: 0.9rem;
+  color: var(--color-text);
+  background: rgba(255, 255, 255, 0.78);
+  box-shadow: 0 1rem 2.2rem rgba(17, 24, 39, 0.08);
+  font: inherit;
+  font-weight: 700;
+  text-align: left;
+  cursor: pointer;
+}
+
+.switcherButton[data-active="true"] {
+  border-color: #0f766e;
+  background: #ecfdf5;
+  box-shadow: 0 1.25rem 2.8rem rgba(15, 118, 110, 0.16);
+}
+
+.switcherStatus {
+  color: var(--color-muted);
+  font-size: 0.8125rem;
+  font-weight: 600;
+}
+
+.statusPanel {
   border: 1px solid rgba(17, 24, 39, 0.12);
   border-radius: 0.5rem;
   padding: clamp(1.25rem, 3vw, 1.75rem);
-  background: rgba(255, 255, 255, 0.78);
-  box-shadow: 0 1.5rem 4rem rgba(17, 24, 39, 0.08);
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(249, 250, 251, 0.82)),
+    #ffffff;
+  box-shadow: 0 1.5rem 3.5rem rgba(17, 24, 39, 0.1);
 }
 
-.panelLabel {
-  margin: 0 0 0.75rem;
-  color: #0f766e;
-  font-size: 0.75rem;
-  font-weight: 800;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+.statusHeader {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
 }
 
-.panel h2 {
+.statusLabel,
+.statusMetric {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2rem;
+  border-radius: 999px;
+  padding: 0.35rem 0.75rem;
+  font-size: 0.8125rem;
+  font-weight: 700;
+}
+
+.statusLabel {
+  color: #064e3b;
+  background: #d1fae5;
+}
+
+.statusLabel[data-tone="mapped"] {
+  color: #1e3a8a;
+  background: #dbeafe;
+}
+
+.statusLabel[data-tone="online"] {
+  color: #166534;
+  background: #dcfce7;
+}
+
+.statusLabel[data-tone="review"] {
+  color: #7c2d12;
+  background: #ffedd5;
+}
+
+.statusMetric {
+  color: var(--color-muted);
+  background: #f3f4f6;
+}
+
+.statusPanel h2 {
+  max-width: 34rem;
   margin: 0;
-  font-size: clamp(1.35rem, 3vw, 1.85rem);
+  font-size: clamp(1.45rem, 3vw, 2.15rem);
   line-height: 1.1;
 }
 
-.panel ul {
+.statusPanel p {
+  margin-top: 0.9rem;
+  color: var(--color-muted);
+  font-size: 1rem;
+}
+
+.detailList {
   display: grid;
-  gap: 0.85rem;
+  gap: 0.65rem;
   margin: 1.25rem 0 0;
   padding: 0;
   list-style: none;
 }
 
-.panel li {
-  display: grid;
-  grid-template-columns: 0.6rem 1fr;
-  gap: 0.75rem;
-  align-items: baseline;
-  color: var(--color-muted);
-  line-height: 1.5;
+.detailList li {
+  display: flex;
+  gap: 0.6rem;
+  align-items: center;
+  color: var(--color-text);
+  font-weight: 700;
 }
 
-.panel li::before {
-  width: 0.6rem;
-  height: 0.6rem;
-  border-radius: 999px;
-  background: #16a34a;
+.detailList li::before {
   content: "";
+  width: 0.55rem;
+  height: 0.55rem;
+  border-radius: 999px;
+  background: #14b8a6;
+  box-shadow: 0 0 0 0.25rem rgba(20, 184, 166, 0.12);
+  flex: 0 0 auto;
 }
 
-.primaryAction:focus-visible,
-.secondaryAction:focus-visible,
-.currentAction:focus-visible {
-  outline: 2px solid var(--color-text);
-  outline-offset: 3px;
-}
-
-@media (max-width: 52rem) {
+@media (max-width: 56rem) {
   .hero {
     grid-template-columns: 1fr;
   }
@@ -146,5 +235,15 @@
 
   .actions {
     flex-direction: column;
+  }
+
+  .primaryAction,
+  .secondaryAction,
+  .currentAction {
+    width: 100%;
+  }
+
+  .switcher {
+    grid-template-columns: 1fr;
   }
 }

@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "backend:check": "next build",
     "start": "next start",
     "lint": "eslint",
     "virtue:help": "node .virtue/cli.mjs help",

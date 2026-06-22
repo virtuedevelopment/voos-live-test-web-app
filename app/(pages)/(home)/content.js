@@ -1,4 +1,8 @@
 export const homeContent = {
-  title: "This is the website home page",
-  description: "Replace this placeholder with the primary website message.",
+  eyebrow: "Live application check",
+  title: "Voos Live Test",
+  description:
+    "A focused test app for verifying the Voos experience, deployment health, and release readiness in one clean first screen.",
+  primaryCta: "View about page",
+  secondaryCta: "Check health status",
 };

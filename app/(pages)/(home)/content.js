@@ -1,8 +1,11 @@
 export const homeContent = {
-  eyebrow: "Live application check",
+  eyebrow: "Voos release console",
   title: "Voos Live Test",
   description:
-    "A focused test app for verifying the Voos experience, deployment health, and release readiness in one clean first screen.",
-  primaryCta: "View about page",
-  secondaryCta: "Check health status",
+    "A compact Next.js surface for validating the public Voos experience, reviewing release context, and checking live service readiness.",
+  primaryCta: "About",
+  secondaryCta: "Health",
+  tertiaryCta: "Home",
+  panelTitle: "First-screen checks",
+  checks: ["Public route loads cleanly", "Release context is easy to find", "Health endpoint stays visible"],
 };

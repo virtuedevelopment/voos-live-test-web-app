@@ -20,7 +20,15 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        {children}
+        <footer className="app-status" aria-label="Application status">
+          <a className="app-status__link" href="/health">
+            <span className="app-status__dot" aria-hidden="true" />
+            <span>System OK</span>
+          </a>
+        </footer>
+      </body>
     </html>
   );
 }

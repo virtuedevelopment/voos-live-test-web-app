@@ -15,18 +15,21 @@ export default function HomePage() {
   return (
     <main className={styles.page}>
       <section className={styles.hero} aria-labelledby="home-title">
-        <div className={styles.heroCopy}>
+        <div className={styles.copy}>
           <p className={styles.eyebrow}>{homeContent.eyebrow}</p>
           <h1 id="home-title">{homeContent.title}</h1>
           <p className={styles.description}>{homeContent.description}</p>
-          <div className={styles.actions} aria-label="Primary links">
+          <nav className={styles.actions} aria-label="Primary navigation">
+            <Link className={styles.currentAction} href="/" aria-current="page">
+              {homeContent.tertiaryCta}
+            </Link>
             <Link className={styles.primaryAction} href="/about">
               {homeContent.primaryCta}
             </Link>
             <Link className={styles.secondaryAction} href="/health">
               {homeContent.secondaryCta}
             </Link>
-          </div>
+          </nav>
         </div>
         <CapabilityDashboard label={homeContent.dashboardLabel} capabilities={homeContent.capabilities} />
       </section>

@@ -1,10 +1,11 @@
 export const homeContent = {
-  eyebrow: "Homepage verification dashboard",
+  eyebrow: "Voos release console",
   title: "Voos Live Test readiness console",
   description:
-    "A focused first screen for reviewing installability, route coverage, live health, and Trial quality before a release moves forward.",
-  primaryCta: "View about page",
-  secondaryCta: "Check health status",
+    "A compact Next.js surface for validating installability, route coverage, live health, and Trial quality before a release moves forward.",
+  primaryCta: "About",
+  secondaryCta: "Health",
+  tertiaryCta: "Home",
   dashboardLabel: "Verification capability views",
   capabilities: [
     {
@@ -14,7 +15,7 @@ export const homeContent = {
       statusTone: "ready",
       headline: "App metadata is surfaced for install checks.",
       description:
-        "Manifest, icons, theme color, and web app settings are visible in the launch surface so install behavior is easy to confirm.",
+        "Manifest, icons, theme color, and web app settings stay visible in the launch surface so install behavior is easy to confirm.",
       details: ["Manifest linked", "PWA icons present", "Theme color declared"],
       metric: "7 install signals",
     },
@@ -25,7 +26,7 @@ export const homeContent = {
       statusTone: "mapped",
       headline: "Public routes stay easy to verify.",
       description:
-        "Homepage, about, contact, health, robots, sitemap, and manifest endpoints remain available without leaving this page.",
+        "Homepage, about, contact, health, robots, sitemap, and manifest endpoints remain available without leaving the readiness console.",
       details: ["Internal CTAs use Next links", "Health endpoint retained", "SEO routes preserved"],
       metric: "7 route checks",
     },
@@ -36,7 +37,7 @@ export const homeContent = {
       statusTone: "online",
       headline: "Runtime status stays one click away.",
       description:
-        "The lightweight dashboard highlights live readiness while the existing fixed health footer remains unchanged.",
+        "The interactive dashboard highlights live readiness while the existing fixed health footer remains unchanged.",
       details: ["Footer status unchanged", "Dedicated health CTA", "Production route intact"],
       metric: "1 live endpoint",
     },
